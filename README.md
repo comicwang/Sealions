@@ -3,4 +3,4 @@
 # 旨在方便.net开发程序的简单化部署
 
 2.程序架构图
-# http://39.99.173.172/SealionsFramework.jpg
+![Image](http://39.99.173.172/SealionsFramework.jpg)
