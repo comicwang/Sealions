@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -88,6 +89,10 @@
     <ProjectReference Include="..\Infoearth.Solution.AutoDeploy.Utility\Infoearth.Solution.AutoDeploy.Utility.csproj">
       <Project>{7930bf73-d539-4c35-a45d-bdca39c8885f}</Project>
       <Name>Infoearth.Solution.AutoDeploy.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sealions.Core\Sealions.Core.csproj">
+      <Project>{87beb4b3-3e1a-4477-93fe-5a7851a34b40}</Project>
+      <Name>Sealions.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

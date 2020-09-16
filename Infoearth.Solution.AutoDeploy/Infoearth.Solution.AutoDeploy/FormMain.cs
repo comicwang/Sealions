@@ -12,6 +12,7 @@ using System.IO;
 using Infoearth.Solution.AutoDeploy.Model;
 using Infoearth.Solution.AutoDeploy.Utility.UI;
 using Infoearth.Solution.AutoDeploy.Utility.Install;
+using Sealions.Core.Files;
 
 namespace Infoearth.Solution.AutoDeploy
 {
@@ -37,7 +38,8 @@ namespace Infoearth.Solution.AutoDeploy
             {
                 cklsbFilter.SetItemChecked(i, true);
             }
-            LoadGlobal();           
+            LoadGlobal();
+            treeView1.BindDir(@"E:\GeologicHazardMonitoring_Product_V2.1");
         }
 
         private void LoadPackageInstall()

@@ -39,6 +39,12 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.deployDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.webNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.portDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dirctoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.domainDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deployDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnCheck = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnImport = new System.Windows.Forms.Button();
@@ -59,19 +65,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnAddFilter = new System.Windows.Forms.Button();
             this.btnClearFilter = new System.Windows.Forms.Button();
             this.cklsbFilter = new System.Windows.Forms.CheckedListBox();
-            this.deployDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.webNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.portDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dirctoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.domainDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deployDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deployDataBindingSource)).BeginInit();
             this.tabControls.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -79,7 +83,7 @@
             this.tabPage6.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deployDataBindingSource)).BeginInit();
+            this.tabPage7.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
@@ -118,10 +122,10 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 625);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 624);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 13, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1005, 25);
+            this.statusStrip1.Size = new System.Drawing.Size(1005, 26);
             this.statusStrip1.TabIndex = 34;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -184,9 +188,56 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
             this.dataGridView1.Size = new System.Drawing.Size(315, 362);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // deployDataGridViewCheckBoxColumn
+            // 
+            this.deployDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.deployDataGridViewCheckBoxColumn.DataPropertyName = "Deploy";
+            this.deployDataGridViewCheckBoxColumn.FillWeight = 40F;
+            this.deployDataGridViewCheckBoxColumn.HeaderText = "";
+            this.deployDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.deployDataGridViewCheckBoxColumn.Name = "deployDataGridViewCheckBoxColumn";
+            // 
+            // webNameDataGridViewTextBoxColumn
+            // 
+            this.webNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.webNameDataGridViewTextBoxColumn.DataPropertyName = "WebName";
+            this.webNameDataGridViewTextBoxColumn.HeaderText = "名称";
+            this.webNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.webNameDataGridViewTextBoxColumn.Name = "webNameDataGridViewTextBoxColumn";
+            // 
+            // portDataGridViewTextBoxColumn
+            // 
+            this.portDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.portDataGridViewTextBoxColumn.DataPropertyName = "Port";
+            this.portDataGridViewTextBoxColumn.FillWeight = 60F;
+            this.portDataGridViewTextBoxColumn.HeaderText = "端口";
+            this.portDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.portDataGridViewTextBoxColumn.Name = "portDataGridViewTextBoxColumn";
+            // 
+            // dirctoryDataGridViewTextBoxColumn
+            // 
+            this.dirctoryDataGridViewTextBoxColumn.DataPropertyName = "Dirctory";
+            this.dirctoryDataGridViewTextBoxColumn.HeaderText = "Dirctory";
+            this.dirctoryDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dirctoryDataGridViewTextBoxColumn.Name = "dirctoryDataGridViewTextBoxColumn";
+            this.dirctoryDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // domainDataGridViewTextBoxColumn
+            // 
+            this.domainDataGridViewTextBoxColumn.DataPropertyName = "Domain";
+            this.domainDataGridViewTextBoxColumn.HeaderText = "Domain";
+            this.domainDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.domainDataGridViewTextBoxColumn.Name = "domainDataGridViewTextBoxColumn";
+            this.domainDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // deployDataBindingSource
+            // 
+            this.deployDataBindingSource.DataSource = typeof(Infoearth.Solution.AutoDeploy.Model.DeployData);
             // 
             // btnCheck
             // 
@@ -228,6 +279,7 @@
             this.tabControls.Controls.Add(this.tabPage6);
             this.tabControls.Controls.Add(this.tabPage3);
             this.tabControls.Controls.Add(this.tabPage5);
+            this.tabControls.Controls.Add(this.tabPage7);
             this.tabControls.Location = new System.Drawing.Point(397, 62);
             this.tabControls.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControls.Name = "tabControls";
@@ -410,6 +462,35 @@
             this.label2.TabIndex = 48;
             this.label2.Text = "2.数据库自动部署";
             // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.treeView1);
+            this.tabPage7.Location = new System.Drawing.Point(4, 25);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(559, 440);
+            this.tabPage7.TabIndex = 5;
+            this.tabPage7.Text = "tabPage7";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // treeView1
+            // 
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView1.ImageIndex = 0;
+            this.treeView1.ImageList = this.imageList1;
+            this.treeView1.Location = new System.Drawing.Point(3, 3);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.SelectedImageIndex = 0;
+            this.treeView1.Size = new System.Drawing.Size(553, 434);
+            this.treeView1.TabIndex = 0;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "dir.png");
+            this.imageList1.Images.SetKeyName(1, "file.png");
+            // 
             // btnAddFilter
             // 
             this.btnAddFilter.Location = new System.Drawing.Point(829, 545);
@@ -446,47 +527,6 @@
             this.cklsbFilter.Size = new System.Drawing.Size(779, 64);
             this.cklsbFilter.TabIndex = 40;
             // 
-            // deployDataGridViewCheckBoxColumn
-            // 
-            this.deployDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.deployDataGridViewCheckBoxColumn.DataPropertyName = "Deploy";
-            this.deployDataGridViewCheckBoxColumn.FillWeight = 40F;
-            this.deployDataGridViewCheckBoxColumn.HeaderText = "";
-            this.deployDataGridViewCheckBoxColumn.Name = "deployDataGridViewCheckBoxColumn";
-            // 
-            // webNameDataGridViewTextBoxColumn
-            // 
-            this.webNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.webNameDataGridViewTextBoxColumn.DataPropertyName = "WebName";
-            this.webNameDataGridViewTextBoxColumn.HeaderText = "名称";
-            this.webNameDataGridViewTextBoxColumn.Name = "webNameDataGridViewTextBoxColumn";
-            // 
-            // portDataGridViewTextBoxColumn
-            // 
-            this.portDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.portDataGridViewTextBoxColumn.DataPropertyName = "Port";
-            this.portDataGridViewTextBoxColumn.FillWeight = 60F;
-            this.portDataGridViewTextBoxColumn.HeaderText = "端口";
-            this.portDataGridViewTextBoxColumn.Name = "portDataGridViewTextBoxColumn";
-            // 
-            // dirctoryDataGridViewTextBoxColumn
-            // 
-            this.dirctoryDataGridViewTextBoxColumn.DataPropertyName = "Dirctory";
-            this.dirctoryDataGridViewTextBoxColumn.HeaderText = "Dirctory";
-            this.dirctoryDataGridViewTextBoxColumn.Name = "dirctoryDataGridViewTextBoxColumn";
-            this.dirctoryDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // domainDataGridViewTextBoxColumn
-            // 
-            this.domainDataGridViewTextBoxColumn.DataPropertyName = "Domain";
-            this.domainDataGridViewTextBoxColumn.HeaderText = "Domain";
-            this.domainDataGridViewTextBoxColumn.Name = "domainDataGridViewTextBoxColumn";
-            this.domainDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // deployDataBindingSource
-            // 
-            this.deployDataBindingSource.DataSource = typeof(Infoearth.Solution.AutoDeploy.Model.DeployData);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -518,6 +558,7 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deployDataBindingSource)).EndInit();
             this.tabControls.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
@@ -527,7 +568,7 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deployDataBindingSource)).EndInit();
+            this.tabPage7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -572,6 +613,9 @@
         private System.Windows.Forms.Panel pnlGlobal;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.FlowLayoutPanel enviromentPnl;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 
