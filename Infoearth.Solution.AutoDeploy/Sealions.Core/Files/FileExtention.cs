@@ -63,9 +63,9 @@ namespace Sealions.Core.Files
 		}
 
 		/// <summary>
-		/// 获取指定目录的文件信息
+		/// 获取指定目录的文件及目录信息
 		/// </summary>
-		/// <param name="Path"></param>
+		/// <param name="Path">文件或者目录路径</param>
 		/// <returns></returns>
 		public static FileOrDirInfo FileInfo(this string Path)
         {
@@ -76,7 +76,7 @@ namespace Sealions.Core.Files
 		/// 绑定文件内容到树控件
 		/// </summary>
 		/// <param name="treeView"></param>
-		/// <param name="Path"></param>
+		/// <param name="Path">文件或者目录路径</param>
 		public static void BindDir(this TreeView treeView, string Path)
 		{
 			FileOrDirInfo parentInfo = Path.FileInfo();
@@ -89,6 +89,20 @@ namespace Sealions.Core.Files
 			treeView.Sort();
 		}
 
+		/// <summary>
+		/// 取消绑定所有文件内容到树控件
+		/// </summary>
+		/// <param name="treeView"></param>
+		public static void ClearBindDir(this TreeView treeView)
+        {
+			treeView.Nodes.Clear();
+        }
+
+		/// <summary>
+		/// 递归文件内容
+		/// </summary>
+		/// <param name="lstFiles"></param>
+		/// <param name="parentNode"></param>
 		private static void BindDir(List<FileOrDirInfo> lstFiles,TreeNode parentNode)
         {
 			foreach (var item in lstFiles)

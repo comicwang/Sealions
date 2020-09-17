@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "package.builder", "package.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sealions.Core", "Sealions.Core\Sealions.Core.csproj", "{87BEB4B3-3E1A-4477-93FE-5A7851A34B40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "config.analysiser", "config.analysiser\config.analysiser.csproj", "{893089EB-AF3E-4760-AB59-3CC4AEC00CC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{87BEB4B3-3E1A-4477-93FE-5A7851A34B40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87BEB4B3-3E1A-4477-93FE-5A7851A34B40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87BEB4B3-3E1A-4477-93FE-5A7851A34B40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{893089EB-AF3E-4760-AB59-3CC4AEC00CC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{893089EB-AF3E-4760-AB59-3CC4AEC00CC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{893089EB-AF3E-4760-AB59-3CC4AEC00CC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{893089EB-AF3E-4760-AB59-3CC4AEC00CC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
