@@ -21,6 +21,12 @@ namespace package.builder
     public class packageInfo
     {
 		/// <summary>
+		/// 当前包ID
+		/// </summary>
+		[XmlElement("pkgId")]
+		public string pkgId { get; set; }
+
+		/// <summary>
 		/// 当前包的目录路径
 		/// </summary>
 		[XmlElement("CurrentDir")]
@@ -37,6 +43,12 @@ namespace package.builder
 		/// </summary>
 		[XmlElement("PType")]
 		public PackageType PType { get; set; }
+
+		/// <summary>
+		/// 当前包的其他信息内容
+		/// </summary>
+		[XmlElement("OtherInfo")]
+		public string OtherInfo { get; set; }
     }
 
 	/// <summary>
