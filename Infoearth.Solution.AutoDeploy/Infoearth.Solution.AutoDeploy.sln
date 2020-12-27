@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deployment.Builder", "Deplo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sealions.Main", "Sealions.Main\Sealions.Main.csproj", "{4AD9F24D-201C-4658-AA02-DFE2CBDCDFA0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "projectManager", "projectManager", "{332F07D9-1FD9-4AF7-B972-901193BFCF81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sealion.Model", "Sealion.Model\Sealion.Model.csproj", "{045B45AF-360A-49B7-B31B-9F410D81E4FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +69,10 @@ Global
 		{4AD9F24D-201C-4658-AA02-DFE2CBDCDFA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AD9F24D-201C-4658-AA02-DFE2CBDCDFA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AD9F24D-201C-4658-AA02-DFE2CBDCDFA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{045B45AF-360A-49B7-B31B-9F410D81E4FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{045B45AF-360A-49B7-B31B-9F410D81E4FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{045B45AF-360A-49B7-B31B-9F410D81E4FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{045B45AF-360A-49B7-B31B-9F410D81E4FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +83,7 @@ Global
 		{893089EB-AF3E-4760-AB59-3CC4AEC00CC1} = {44D17B20-1169-4A23-8D82-CE02F90BBECE}
 		{C52BA21F-1705-40CB-9230-1F2D9E356315} = {1A3D1280-4CA9-4AA9-B60C-7A0BA0BBD8E6}
 		{4AD9F24D-201C-4658-AA02-DFE2CBDCDFA0} = {1A3D1280-4CA9-4AA9-B60C-7A0BA0BBD8E6}
+		{045B45AF-360A-49B7-B31B-9F410D81E4FF} = {332F07D9-1FD9-4AF7-B972-901193BFCF81}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D3B85887-3065-4B9A-9AE1-B3EAE74D5442}
