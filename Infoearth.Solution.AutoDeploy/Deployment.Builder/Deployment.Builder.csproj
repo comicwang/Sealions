@@ -109,6 +109,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\package.builder\package.builder.csproj">
+      <Project>{04ce5e39-1082-4fca-ad15-0804cd020819}</Project>
+      <Name>package.builder</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sealion.Model\Sealion.Model.csproj">
       <Project>{045b45af-360a-49b7-b31b-9f410d81e4ff}</Project>
       <Name>Sealion.Model</Name>

@@ -1,4 +1,5 @@
-﻿using Sealion.Model;
+﻿using package.builder;
+using Sealion.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -141,7 +142,19 @@ namespace Deployment.Builder
 
         private void EditPackage(PackageInfo packageInfo)
         {
-
+            TabPage tabPage = null;
+            if (tabControl1.TabPages.ContainsKey(packageInfo.Id) == false)
+            {
+                tabPage = new TabPage(packageInfo.Name);
+                tabPage.Name = packageInfo.Id;
+                IISPackageControl iISPackageControl = new IISPackageControl(packageInfo);
+                iISPackageControl.Dock = DockStyle.Fill;
+                tabPage.Controls.Add(iISPackageControl);
+                tabControl1.Controls.Add(tabPage);
+            }
+            else
+                tabPage = tabControl1.TabPages[packageInfo.Id];
+            tabControl1.SelectedTab = tabPage;
         }
 
         private void listView1_DoubleClick(object sender, EventArgs e)
